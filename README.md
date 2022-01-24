@@ -2,10 +2,10 @@
 
 Example available for the following javscript frameworks:
 
-- [angular](angular/README.md)
-- [javascript](javascript/README.md)
-- [react](react/README.md)
-- [vue](vue/README.md)
+- [angular](angular/)
+- [javascript](javascript/)
+- [react](react/)
+- [vue](vue/)
 
 ### More info
 
