@@ -17,13 +17,16 @@ export class AppComponent implements OnInit {
       meetingId: meetingId,
       apiKey: apiKey,
 
+      region: "sg001", // region for new meeting
+
       containerId: null,
-      redirectOnLeave: 'https://www.videosdk.live/',
+      redirectOnLeave: "https://www.videosdk.live/",
 
       micEnabled: true,
       webcamEnabled: true,
       participantCanToggleSelfWebcam: true,
       participantCanToggleSelfMic: true,
+      participantCanLeave: true, // if false, leave button won't be visible
 
       chatEnabled: true,
       screenShareEnabled: true,
@@ -31,51 +34,67 @@ export class AppComponent implements OnInit {
       whiteboardEnabled: true,
       raiseHandEnabled: true,
 
-      recordingEnabled: true,
-      recordingEnabledByDefault: false,
-      recordingWebhookUrl: 'https://www.videosdk.live/callback',
-      recordingAWSDirPath: `/meeting-recordings/${meetingId}/`, // automatically save recording in this s3 path
-
-      brandingEnabled: true,
-      brandLogoURL: 'https://picsum.photos/200',
-      brandName: 'Awesome startup',
-
-      participantCanLeave: true, // if false, leave button won't be visible
+      recording: {
+        autoStart: true, // auto start recording on participant joined
+        enabled: true,
+        webhookUrl: "https://www.videosdk.live/callback",
+        awsDirPath: `/meeting-recordings/${meetingId}/`, // automatically save recording in this s3 path
+      },
 
       livestream: {
         autoStart: true,
-        outputs: [
-          // {
-          //   url: "rtmp://x.rtmp.youtube.com/live2",
-          //   streamKey: "<STREAM KEY FROM YOUTUBE>",
-          // },
-        ],
+        enabled: true,
+      },
+
+      layout: {
+        type: "SPOTLIGHT", // "SPOTLIGHT" | "SIDEBAR" | "GRID"
+        priority: "PIN", // "SPEAKER" | "PIN",
+        // gridSize: 3,
+      },
+
+      branding: {
+        enabled: true,
+        logoURL:
+          "https://static.zujonow.com/videosdk.live/videosdk_logo_circle_big.png",
+        name: "Prebuilt",
+        poweredBy: false,
       },
 
       permissions: {
+        pin: true,
         askToJoin: false, // Ask joined participants for entry in meeting
         toggleParticipantMic: true, // Can toggle other participant's mic
         toggleParticipantWebcam: true, // Can toggle other participant's webcam
-        removeParticipant: true, // Remove other participant from meeting
-        endMeeting: true, // End meeting for all participant
-        drawOnWhiteboard: true, // Can Draw on whiteboard
+        drawOnWhiteboard: true, // Can draw on whiteboard
         toggleWhiteboard: true, // Can toggle whiteboard
-        toggleRecording: true, // Can toggle recording
+        toggleRecording: true, // Can toggle meeting recording
+        toggleLivestream: true, //can toggle live stream
+        removeParticipant: true, // Can remove participant
+        endMeeting: true, // Can end meeting
+        changeLayout: true, //can change layout
       },
 
-      pin: {
-        allowed: true, // participant can pin any participant in meeting
-        layout: 'SPOTLIGHT', // meeting layout - GRID | SPOTLIGHT | SIDEBAR
+      joinScreen: {
+        visible: true, // Show the join screen ?
+        title: "Daily scrum", // Meeting title
+        meetingUrl: window.location.href, // Meeting joining url
       },
 
       leftScreen: {
         // visible when redirect on leave not provieded
         actionButton: {
           // optional action button
-          label: 'Video SDK Live', // action button label
-          href: 'https://videosdk.live/', // action button href
+          label: "Video SDK Live", // action button label
+          href: "https://videosdk.live/", // action button href
         },
       },
+
+      notificationSoundEnabled: true,
+
+      debug: true, // pop up error during invalid config or netwrok error
+
+      maxResolution: "sd", // "hd" or "sd"
+
     };
 
     const meeting = new VideoSDKMeeting();
