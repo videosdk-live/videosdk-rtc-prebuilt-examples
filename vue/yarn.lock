@@ -1131,10 +1131,10 @@
     anymatch "^3.0.0"
     source-map "^0.6.0"
 
-"@videosdk.live/rtc-js-prebuilt@^0.1.26":
-  version "0.1.26"
-  resolved "https://registry.yarnpkg.com/@videosdk.live/rtc-js-prebuilt/-/rtc-js-prebuilt-0.1.26.tgz#89fe9c84b6e8def6f7808f4cda1299504897a5fc"
-  integrity sha512-aFh4V2CKJOy4SHqsZtRGRCep6meu7C9bzBLeb5hwSgD7zatJMx+QFe1zZMLYKWAYOORVc2oASq597uu0AI5Y6A==
+"@videosdk.live/rtc-js-prebuilt@^0.3.3":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@videosdk.live/rtc-js-prebuilt/-/rtc-js-prebuilt-0.3.5.tgz#b55b87a7a0dcd406d1efa6ad1ed614b254042aae"
+  integrity sha512-+HO89Xf7EYlCEhI/A6Dd1U17AWF0bVczNFZaLjDcl0sM+2OiRiOu9lPmk6vNdVZI6ZDgucp264fPh1bwu4N1Mw==
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
