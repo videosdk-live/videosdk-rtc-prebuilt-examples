@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String prebuiltVersion = "0.3.21";
 
-    private String meetingId = "wyea-c8vp-ivt6";
+    private String meetingId = "YOUR_MMETING_ID";
 
     private String name = "John Doe";
     private String micEnabled = "true";
