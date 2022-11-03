@@ -7,7 +7,7 @@ At Video SDK, we’re building tools to help companies create world-class collab
 
 ## Demo App
 
-Check out demo [here](https://videosdk.live/prebuilt/)
+Check out demo [here](https://videosdk.live/prebuilt/demo)
 
 ## Prebuilt Examples
 
