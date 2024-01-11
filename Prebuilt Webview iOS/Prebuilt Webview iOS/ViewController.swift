@@ -11,7 +11,7 @@ import SafariServices
 
 class ViewController: UIViewController, SFSafariViewControllerDelegate {
 
-    public var prebuiltVersion = "0.3.31" // VideoSDK Prebuilt Version
+    public var prebuiltVersion = "0.3.37" // VideoSDK Prebuilt Version
     public var token = "YOUR_TOKEN" //Replace your token here
     public var meetingId = "YOUR_MEETINGID" //Replace your meeting id
 
