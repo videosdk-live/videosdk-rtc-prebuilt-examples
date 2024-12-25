@@ -52,7 +52,7 @@ Before proceeding, ensure that your development environment meets the following 
 //...
 private String token = "REPLACE_YOUR_TOKEN_HERE";
 
-private String prebuiltVersion = "0.3.42";
+private String prebuiltVersion = "0.3.43";
 
 private String meetingId = "YOUR_MEETING_ID";
 
