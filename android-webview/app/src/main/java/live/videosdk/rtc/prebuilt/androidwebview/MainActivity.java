@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
   private String meetingId = "YOUR_MEETING_ID";
 
-  private String name = "John Doe";
+  private String name = "Ada Lovelace";
   private String micEnabled = "true";
   private String webcamEnabled = "true";
 
@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
       .authority("embed.videosdk.live")
       .appendPath("rtc-js-prebuilt")
       .appendPath(prebuiltVersion)
+      .appendPath("")
       .appendQueryParameter("name", name) // Name Parameter
       .appendQueryParameter("micEnabled", micEnabled) // intial Mic Status Parameter
       .appendQueryParameter("webcamEnabled", webcamEnabled) // initial webcam status paramter
