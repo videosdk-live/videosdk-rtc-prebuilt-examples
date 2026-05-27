@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
     WebSettings webSettings = myWebView.getSettings();
     webSettings.setJavaScriptEnabled(true);
+    webSettings.setDomStorageEnabled(true);
+    webSettings.setMediaPlaybackRequiresUserGesture(false);
+    webSettings.setDatabaseEnabled(true);
 
     myWebView.setWebViewClient(new WebViewClient());
     myWebView.setWebChromeClient(
@@ -85,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
       .authority("embed.videosdk.live")
       .appendPath("rtc-js-prebuilt")
       .appendPath(prebuiltVersion)
+      .appendPath("")
       .appendQueryParameter("name", name) // Name Parameter
       .appendQueryParameter("micEnabled", micEnabled) // intial Mic Status Parameter
       .appendQueryParameter("webcamEnabled", webcamEnabled) // initial webcam status paramter
