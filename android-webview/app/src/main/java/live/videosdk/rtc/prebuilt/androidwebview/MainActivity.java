@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
   private String meetingId = "YOUR_MEETING_ID";
 
-  private String name = "Ada Lovelace";
+  private String name = "John Doe";
   private String micEnabled = "true";
   private String webcamEnabled = "true";
 
